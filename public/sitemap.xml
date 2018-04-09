@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>https://affectedbook.com/authors/</loc>
+      <lastmod>2017-06-27T17:39:21-07:00</lastmod>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/about/</loc>
+      <lastmod>2017-06-27T17:39:21-07:00</lastmod>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/foxes/</loc>
+      <lastmod>2017-06-27T17:39:21-07:00</lastmod>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/structure/part3/</loc>
+      <lastmod>2017-05-15T23:00:00+00:00</lastmod>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/structure/part2/</loc>
+      <lastmod>2017-05-15T22:00:00+00:00</lastmod>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/structure/part1/</loc>
+      <lastmod>2017-05-15T21:00:00+00:00</lastmod>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/foxes/1/</loc>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/foxes/2/</loc>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/foxes/3/</loc>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/foxes/4/</loc>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/foxes/5/</loc>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/foxes/6/</loc>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/foxes/7/</loc>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/foxes/</loc>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/structure/</loc>
+      <lastmod>2017-05-15T23:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+      <loc>https://affectedbook.com/</loc>
+      <lastmod>2017-06-27T17:39:21-07:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+</urlset>

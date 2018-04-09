@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Structures on affected book</title>
+    <link>https://affectedbook.com/structure/</link>
+    <description>Recent content in Structures on affected book</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>true</copyright>
+    <lastBuildDate>Mon, 15 May 2017 23:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://affectedbook.com/structure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Affective Strategy</title>
+      <link>https://affectedbook.com/structure/part3/</link>
+      <pubDate>Mon, 15 May 2017 23:00:00 +0000</pubDate>
+      
+      <guid>https://affectedbook.com/structure/part3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Affective Companies</title>
+      <link>https://affectedbook.com/structure/part2/</link>
+      <pubDate>Mon, 15 May 2017 22:00:00 +0000</pubDate>
+      
+      <guid>https://affectedbook.com/structure/part2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Affecting Customers</title>
+      <link>https://affectedbook.com/structure/part1/</link>
+      <pubDate>Mon, 15 May 2017 21:00:00 +0000</pubDate>
+      
+      <guid>https://affectedbook.com/structure/part1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
