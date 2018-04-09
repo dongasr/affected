@@ -16,7 +16,7 @@
         <div class="col-xs-12 middle-xs slider-container">
           <div class="siema">
           {{ range $foxes }}
-            <div> {{ .Content }} </div>
+            <div class="inner-container"> {{ .Content }} </div>
           {{ end }}
           </div>
           <button class="prev"><img src="/images/icon-arrow-left.png"></button>
@@ -26,6 +26,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12 center-xs">
+          <h2><a href="">affected instagram</a></h2>
           <div id="instafeed">
           </div>
 
@@ -34,15 +35,15 @@
             var userFeed = new Instafeed({
               get: 'user',
               userId: '7436678772',
-              clientId: '',
-              accessToken: '',
+              clientId: '876adb5529a14dcd9b633147b6838da1',
+              accessToken: '7436678772.1677ed0.c676c8abf41549f0b4b30239b781ffdf',
               resolution: 'standard_resolution',
               template: '<a href="\{\{link\}\}" target="_blank" id="\{\{id\}\}"><img src="\{\{image\}\}" /></a>',
               sortBy: 'most-recent',
               limit: 4,
               links: false
             });
-            //userFeed.run();
+            userFeed.run();
           </script>
         </div>
       </div>

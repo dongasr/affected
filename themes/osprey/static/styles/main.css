@@ -1265,20 +1265,24 @@ h1, h2, h3 {
     font-family: "Hel┬¡vetica", Arial, sans-serif; }
 
 #foxes .slider-container {
-  position: relative; }
+  position: relative;
+  background-color: #F7F7F7;
+  padding: 0; }
   #foxes .slider-container .siema {
-    margin: 2em; }
+    margin: 1em 0; }
+    #foxes .slider-container .siema .inner-container {
+      padding: 2em 3em 0; }
   #foxes .slider-container button {
     background-color: transparent;
     position: absolute;
-    top: 50%;
-    width: 30px;
+    top: 40%;
+    width: 1em;
     outline: none;
     cursor: pointer; }
     #foxes .slider-container button.prev {
-      left: 0; }
+      left: 1em; }
     #foxes .slider-container button.next {
-      right: 0; }
+      right: 1em; }
 
 #instafeed {
   max-width: 1080px;
@@ -1297,7 +1301,13 @@ h1, h2, h3 {
         width: 25%; } }
     #instafeed a img {
       display: block;
-      width: 100%; }
+      width: 100%;
+      transition: transform 0.3s ease-in-out;
+      transform: scale(0.8); }
+    #instafeed a:hover img {
+      transform: scale(1); }
+    #instafeed ahover img::after {
+      box-shadow: black 5px 5px 5px 5px; }
 
 .contact {
   width: 100%;
