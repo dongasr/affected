@@ -1,5 +1,6 @@
 title = "affected book"
-baseURL = "https://affectedbook.com"
+#baseURL = "https://affectedbook.com"
+baseURL = "http://affectedbook.com.s3-website-ap-southeast-2.amazonaws.com/"
 tags = ["affected book", "design thinking", "companion"]
 languageCode = "en-US"
 config = "config.toml"
