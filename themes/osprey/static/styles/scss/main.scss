@@ -41,10 +41,11 @@ header {
     color: $white;
     font-size: 8rem;
     line-height: 6rem;
-    letter-spacing: 5px;
+    letter-spacing: 0px;
     margin: 0;
   }
-  strong{
+  strong {
+    color: $white;
     position: relative;
   }
   strong::before{
@@ -53,17 +54,25 @@ header {
     bottom: -10px;
     height: 1px;
     width: 100%;
-    border-bottom: 4px solid $black;
+    border-bottom: 4px solid $white;
+  }
+  p em {
+    color: $white;
   }
   .button {
-  display: inline-block;
-  width: 200px;
-  padding: 8px;
-  color: #fff;
-  border: 1px solid #fff;
-  text-align: center;
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    background-color: $grey;
+    color: $white;
+    border-radius: 25px;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: $red;
+    }
 
-}
+  }
 }
 nav {
   height: $vertical-rhythm * 2;
@@ -76,8 +85,7 @@ nav {
   box-shadow: 0 2px 2px rgba(0, 0, 0, .4 );
   h3 {
     margin: 0;
-    font-family: $font-body;
-    text-transform: uppercase;
+    font-family: $grey;
     letter-spacing: 2px;
     font-weight: 600;
   }
@@ -87,9 +95,34 @@ nav {
     max-height: 2.5em;
     vertical-align: middle;
   }
-  div.logo, div.nav-toggle {
+  div.logo, div.nav-toggle, div.buy-button {
     visibility: hidden;
     max-width: none;
+  }
+  .logo {
+    position: absolute;
+    left: 2em;
+  }
+  .nav-toggle{
+    position: absolute;
+    right: 6em;
+  }
+  .buy-button {
+    position: absolute;
+    right: 2em;
+    .button {
+      display: inline-block;
+      width: 100%;
+      padding: 8px 1em;
+      background-color: $grey;
+      color: $white;
+      border-radius: 25px;
+      text-align: center;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $red;
+      }
+    }
   }
   .nav-toggle a {
     display: none;
@@ -148,9 +181,16 @@ h1, h2, h3 {
   font-family: $font-header;
   margin-top: $vertical-rhythm;
   letter-spacing: 2px;
+  font-weight: bold;
   a {
     text-decoration: none;
   }
+}
+
+main h1 {
+  text-align: left;
+  color: $red;
+  font-weight: bold;
 }
 
 .posts-list {
@@ -221,6 +261,9 @@ h1, h2, h3 {
   p {
     margin-top: $vertical-rhythm;
   }
+  h2 strong {
+    color: $red;
+  }
   a {
     text-shadow: 0.03em 0 #fff,
     -0.03em 0 #fff,
@@ -259,7 +302,7 @@ h1, h2, h3 {
 }
 .gallery {
 
-  padding: $vertical-rhythm * 2 0 $vertical-rhythm * 2;
+  padding: 0 0 $vertical-rhythm * 2;
   margin: auto;
 
   div[class^="col-"], div[class*=" col-"] {
@@ -272,6 +315,10 @@ h1, h2, h3 {
       color: $white;
     }
   }
+
+  .gallery-container{
+    margin: 0 2em;
+  }
 }
 .title{
   position: absolute;
@@ -282,15 +329,19 @@ h1, h2, h3 {
   height: 100%;
   width: 100%;
   h2 {
-    color: $font-body;
+    color: $grey;
     position: absolute;
     bottom: 2rem;
+    left: 2rem;
+    text-align: left;
     transition: 0.3s ease-in-out;
   }
   h4 {
-    color: $red;
+    color: $grey;
     position: absolute;
     bottom: 5rem;
+    left: 2rem;
+    text-align: left;
   }
 }
 .overlay {
@@ -306,7 +357,7 @@ h1, h2, h3 {
   transition: .3s ease-in-out;
   .chapters {
     display: block;
-    padding: 5em 1em;
+    padding: 3em 1em;
   }
   h3, h4 {
     color: $white;

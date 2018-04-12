@@ -27,7 +27,7 @@ var toggle = function(el) {
     if (scrollPosition > windowHeight - navHeight) {
       // Nav is fixed to top
       $('nav').classList.add('nav-fixed');
-      $$('nav > .logo, nav > .nav-toggle').forEach(function(el) {
+      $$('nav > .logo, nav > .nav-toggle, nav > .buy-button').forEach(function(el) {
         el.style.visibility = 'visible';
         el.classList.add('show');
         el.classList.remove('hide');
@@ -35,7 +35,7 @@ var toggle = function(el) {
     } else {
       // Nav is not fixed
       $('nav').classList.remove('nav-fixed');
-      $$('nav > .logo, nav > .nav-toggle').forEach(function(el) {
+      $$('nav > .logo, nav > .nav-toggle, nav > .buy-button').forEach(function(el) {
         el.style.visibility = 'hidden';
         el.classList.add('hide');
         el.classList.remove('show');

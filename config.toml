@@ -12,6 +12,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"] # This theme does not currently use 
 
 [Params]
     tagline = "emotionally engaging customers in the digital age"
+    queryline = "Find out what Johnny Depp, German porn and Burberry have in common."
     author = "Rob Dongas"
     description = "Companion website for Affected the book."
     logoSmall = "/images/affected-icon.png"
@@ -30,19 +31,19 @@ disableKinds = ["taxonomy", "taxonomyTerm"] # This theme does not currently use 
     ajaxFormspree = false
 
 [[menu.main]]
-    name = "For Whom"
+    name = "for whom"
     url  = "/#about"
     weight = 1
 [[menu.main]]
-    name = "Structure"
+    name = "structure"
     url  = "/#structure"
     weight = 2
 [[menu.main]]
-    name = "Authors"
+    name = "authors"
     url  = "/#authors"
     weight = 3
 [[menu.main]]
-    name = "Foxes"
+    name = "foxes"
     url  = "/#foxes"
     weight = 4
 # [[menu.main]]

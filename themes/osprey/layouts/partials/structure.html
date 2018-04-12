@@ -1,11 +1,15 @@
 <section class="gallery" id="structure">
-  <div class="row center-xs">
-    <div class="col-xs-12">
-      <h1>Book Structure</h1>
+  <div class="wide-container">
+    <div class="row center-xs">
+      <div class="col-xs-12">
+        <h1>book structure</h1>
+      </div>
     </div>
   </div>
 
-    <div class="row">
+
+    <div class="row gallery-container">
+
 
 
         {{ $galleryTotal := len (where .Site.RegularPages "Section" "structure") }}
