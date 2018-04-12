@@ -1046,7 +1046,8 @@ header {
     margin: 0; }
   header strong {
     color: #FFFFFF;
-    position: relative; }
+    position: relative;
+    margin-left: 10px; }
   header strong::before {
     content: "";
     position: absolute;
@@ -1060,6 +1061,7 @@ header {
     display: inline-block;
     width: 200px;
     padding: 8px;
+    margin: 0 0.75em;
     background-color: #b3b2b2;
     color: #FFFFFF;
     border-radius: 25px;
@@ -1067,6 +1069,8 @@ header {
     transition: color 0.3s ease-in-out; }
     header .button:hover {
       color: #D41016; }
+  header .signature-img {
+    display: inline-block; }
 
 nav {
   height: 4rem;

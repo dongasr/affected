@@ -47,6 +47,7 @@ header {
   strong {
     color: $white;
     position: relative;
+    margin-left: 10px;
   }
   strong::before{
     content: "";
@@ -63,6 +64,7 @@ header {
     display: inline-block;
     width: 200px;
     padding: 8px;
+    margin: 0 0.75em;
     background-color: $grey;
     color: $white;
     border-radius: 25px;
@@ -72,6 +74,9 @@ header {
       color: $red;
     }
 
+  }
+  .signature-img {
+    display: inline-block;
   }
 }
 nav {
