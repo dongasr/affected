@@ -35,6 +35,7 @@
   50% { color: $black; }
 }
 
+
 header {
   background-color: $red;
   h1 {
@@ -269,40 +270,61 @@ main h1 {
   h2 strong {
     color: $red;
   }
-  a {
-    text-shadow: 0.03em 0 #fff,
-    -0.03em 0 #fff,
-    0 0.03em #fff,
-    0 -0.03em #fff,
-    0.06em 0 #fff,
-    -0.06em 0 #fff,
-    0.09em 0 #fff,
-    -0.09em 0 #fff,
-    0.12em 0 #fff,
-    -0.12em 0 #fff,
-    0.15em 0 #fff,
-    -0.15em 0 #fff,
-    0.03em 0.075em #fff,
-    -0.03em 0.075em #fff,
-    0.06em 0.075em #fff,
-    -0.06em 0.075em #fff,
-    0.09em 0.075em #fff,
-    -0.09em 0.075em #fff,
-    0.12em 0.075em #fff,
-    -0.12em 0.075em #fff,
-    0.15em 0.075em #fff,
-    -0.15em 0.075em #fff;
-    background-image: linear-gradient($red,$red);
-    background-size: 2px 3px;
-    background-repeat: repeat-x;
-    background-position: 0 95%;
-    text-decoration: none;
-    &:hover {
-      color: $red;
-    }
+  h4 {
+    text-transform: uppercase;
+    color: $grey;
   }
   img {
     max-width: 80%;
+  }
+  .icon-link {
+      width: $social-icon-size;
+      height: $social-icon-size;
+      background-color: $social-default-btn-color;
+      line-height: $social-icon-size;
+      text-align: center;
+      vertical-align: middle;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      margin: 5px;
+      box-sizing: content-box;
+
+      &.round {
+        border-radius: 50%;
+      }
+
+
+      &:hover {
+        transition: background-color 150ms ease-in-out;
+        height: $social-icon-size - $social-icon-border * 2;
+        line-height: $social-icon-size - $social-icon-border * 2;
+        width: $social-icon-size - $social-icon-border * 2;
+        background-color: #fff;
+
+        @each $social-alias, $social-color in $social-color-pallete {
+          &.#{$social-alias} {
+            border: $social-icon-border solid $social-color;
+          }
+        }
+
+        .fa {
+          line-height: $social-icon-size - $social-icon-border * 2;
+        }
+
+        @each $social-alias, $social-color in $social-color-pallete {
+          .fa-#{$social-alias} {
+              color: $social-color;
+              transition: color 150ms ease-in-out;
+          }
+        }
+    }
+
+    .fa{
+      color: $social-default-icon-color;
+      line-height: $social-icon-size;
+      font-size: $social-icon-size - $social-icon-size * 0.40;
+    }
   }
 }
 .gallery {

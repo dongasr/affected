@@ -8,6 +8,20 @@ $smoke: #F7F7F7;
 $accent: #DA784D;
 $white: #FFFFFF;
 
+$social-color-pallete: (
+     instagram: #833ab4,
+     linkedin: #007bb6,
+     twitter: #00aced,
+);
+
+$social-default-icon-color: #fff;
+$social-default-btn-color: $grey;
+$social-icon-size: 40px;
+$social-icon-border: 2px;
+$social-icon-border-radius: 5px;
+
+$brand-color: #006FC2;
+
 @mixin transparentize($color){
   background-color: rgba( $color, 0.85);
 }

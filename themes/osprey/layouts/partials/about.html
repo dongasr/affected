@@ -3,6 +3,12 @@
 {{ if (where (readDir $directory) "Name" $filename) }}
   <section class="about" id="about">
     <div class="wide-container">
+      <h4>Check us out</h4>
+      <div class="row">
+        <a href="https://www.instagram.com/affected_thebook/" class="icon-link round instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://twitter.com/drcarawrigley?lang=en" class="icon-link round linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/karla-straker-a7051a42/" class="icon-link round twitter"><i class="fa fa-twitter"></i></a>
+      </div>
       <div class="row center-xs">
         <div class="col-xs-12">
           <h1>{{ with $.Site.GetPage "page" "about.md" }}{{ .Title }}{{ end }}</h1>
