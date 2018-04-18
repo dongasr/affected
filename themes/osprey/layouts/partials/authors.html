@@ -4,11 +4,6 @@
   <section class="authors" id="authors">
     <div class="wide-container middle-xs">
       <div class="row center-xs">
-        <div class="col-xs-12">
-          <h1>{{ with $.Site.GetPage "page" "authors.md" }}{{ .Title }}{{ end }}</h1>
-        </div>
-      </div>
-      <div class="row center-xs">
         <div class="col-xs-12 middle-xs author-bio">
           {{ with $.Site.GetPage "page" "authors.md" }}
             {{ .Content }}

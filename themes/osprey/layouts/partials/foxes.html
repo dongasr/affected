@@ -3,11 +3,6 @@
 {{ if (where (readDir $directory) "Name" $filename) }}
   <section class="foxes" id="foxes">
     <div class="wide-container middle-xs">
-      <div class="row center-xs">
-        <div class="col-xs-12">
-          <h1>{{ with $.Site.GetPage "page" "foxes.md" }}{{ .Title }}{{ end }}</h1>
-        </div>
-      </div>
       <div class="row">
 
       {{ $foxes := (where .Site.RegularPages "Section" "foxes") }}
@@ -40,7 +35,7 @@
               resolution: 'standard_resolution',
               template: '<a href="\{\{link\}\}" target="_blank" id="\{\{id\}\}"><img src="\{\{image\}\}" /></a>',
               sortBy: 'most-recent',
-              links: false
+              links: false,
             });
             userFeed.run();
           </script>
