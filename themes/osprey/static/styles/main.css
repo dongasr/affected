@@ -1534,7 +1534,7 @@ ul li {
   50% {
     color: #212121; } }
 header {
-  background-color: #D41016; }
+  position: relative; }
   header h1 {
     color: #FFFFFF;
     font-size: 8rem;
@@ -1545,13 +1545,6 @@ header {
     color: #FFFFFF;
     position: relative;
     margin-left: 10px; }
-  header strong::before {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    height: 1px;
-    width: 100%;
-    border-bottom: 4px solid #FFFFFF; }
   header p em, header p q {
     color: #FFFFFF; }
   header .button {
@@ -1567,8 +1560,27 @@ header {
             transition: color 0.3s ease-in-out; }
     header .button:hover {
       color: #D41016; }
-  header .signature-img {
-    display: inline-block; }
+  header .queryline {
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.7);
+    position: absolute;
+    bottom: 64px;
+    letter-spacing: 1px; }
+    header .queryline p {
+      margin: 1em 0 0;
+      padding: 1em;
+      padding-right: 3em; }
+    header .queryline .signature-img {
+      display: inline-block;
+      max-height: 3em;
+      margin-bottom: 1em;
+      padding-right: 3em; }
+  header #video-background {
+    position: absolute;
+    left: -25%;
+    top: -100%;
+    min-height: 100%;
+    min-width: 100%; }
 
 nav {
   height: 4rem;
@@ -1579,6 +1591,8 @@ nav {
   z-index: 100;
   text-align: center;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); }
+  nav a {
+    color: #b3b2b2; }
   nav h3 {
     margin: 0;
     font-family: #b3b2b2;
@@ -1663,8 +1677,8 @@ main.active {
   margin: auto; }
 
 .wide-container {
-  max-width: 65rem;
-  padding: 4rem 0 4rem;
+  max-width: 80rem;
+  padding-top: 4rem;
   margin: auto; }
 
 p {
@@ -1729,9 +1743,7 @@ main h1 {
   bottom: 0; }
 
 .about {
-  width: 100%;
-  background-color: #F7F7F7;
-  padding-bottom: 4rem; }
+  width: 100%; }
   .about p {
     margin-top: 2rem; }
   .about h2 strong {
@@ -1740,7 +1752,9 @@ main h1 {
     text-transform: uppercase;
     color: #b3b2b2; }
   .about img {
-    max-width: 80%; }
+    max-width: 80%;
+    position: relative;
+    top: -4em; }
   .about .icon-link {
     width: 40px;
     height: 40px;
@@ -1788,15 +1802,10 @@ main h1 {
       font-size: 24px; }
 
 .gallery {
-  padding: 0 0 4rem;
   margin: auto; }
   .gallery div[class^="col-"], .gallery div[class*=" col-"] {
     padding: 0;
     position: relative; }
-    .gallery div[class^="col-"]:hover .overlay, .gallery div[class*=" col-"]:hover .overlay {
-      opacity: 1; }
-    .gallery div[class^="col-"]:hover .title h2, .gallery div[class*=" col-"]:hover .title h2 {
-      color: #FFFFFF; }
   .gallery .gallery-container {
     margin: 0 2em; }
 
@@ -1811,47 +1820,35 @@ main h1 {
   .title h2 {
     color: #b3b2b2;
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
     left: 2rem;
     text-align: left;
     -webkit-transition: 0.3s ease-in-out;
-            transition: 0.3s ease-in-out; }
+            transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 400; }
   .title h4 {
     color: #b3b2b2;
     position: absolute;
-    bottom: 5rem;
+    bottom: 2rem;
     left: 2rem;
-    text-align: left; }
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background-color: rgba(33, 33, 33, 0.85);
-  -webkit-transition: .3s ease-in-out;
-          transition: .3s ease-in-out; }
-  .overlay .chapters {
-    display: block;
-    padding: 3em 1em; }
-  .overlay h3, .overlay h4 {
-    color: #FFFFFF;
-    display: block;
-    width: 100%;
-    margin: 0; }
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px; }
 
 #authors {
-  background-color: #D41016; }
+  padding: 4rem 0; }
   #authors h1 {
     color: #FFFFFF; }
   #authors .author-bio {
     background-color: #FFFFFF;
     padding: 2rem;
     padding-bottom: 0; }
+    #authors .author-bio strong {
+      color: #D41016; }
+  #authors img {
+    border-radius: 50%; }
 
 .blog {
   min-height: 100vh; }
@@ -1861,12 +1858,40 @@ main h1 {
 
 #foxes .slider-container {
   position: relative;
-  background-color: #F7F7F7;
+  background-color: #65686b;
   padding: 0; }
   #foxes .slider-container .siema {
     margin: 1em 0; }
     #foxes .slider-container .siema .inner-container {
-      padding: 2em 3em 0; }
+      padding: 2em 6em 0; }
+      #foxes .slider-container .siema .inner-container p, #foxes .slider-container .siema .inner-container strong, #foxes .slider-container .siema .inner-container em, #foxes .slider-container .siema .inner-container q {
+        color: #FFF; }
+      #foxes .slider-container .siema .inner-container p:nth-child(1) {
+        position: relative; }
+        #foxes .slider-container .siema .inner-container p:nth-child(1)::before {
+          content: "''";
+          font-size: 2em;
+          line-height: 0.5em;
+          color: #D41016;
+          position: absolute;
+          top: 6px;
+          left: -20px; }
+        #foxes .slider-container .siema .inner-container p:nth-child(1)::after {
+          content: "''";
+          font-size: 2em;
+          line-height: 0.5em;
+          color: #D41016;
+          position: relative;
+          top: 6px;
+          right: -6px; }
+      #foxes .slider-container .siema .inner-container p:nth-last-child(1) {
+        text-align: right;
+        margin-right: 2em; }
+        #foxes .slider-container .siema .inner-container p:nth-last-child(1)::before {
+          content: "- ";
+          font-size: 2em;
+          color: #D41016;
+          position: relative; }
   #foxes .slider-container button {
     background-color: transparent;
     position: absolute;

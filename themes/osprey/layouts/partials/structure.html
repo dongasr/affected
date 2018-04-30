@@ -1,6 +1,4 @@
 <section class="gallery" id="structure">
-  <div class="wide-container">
-  </div>
 
 
     <div class="row gallery-container">
@@ -20,17 +18,9 @@
         {{ range first 3 $galleryReverse }}
             <div class="col-xs-12 col-md-4">
                 <img src="/images/{{ .Params.image}}" {{ if .Params.alt }}alt="{{ .Params.alt }}"{{ end }}>
-                <div class="row center-xs overlay">
-                  <div class="chapters">
-                    {{ range .Params.Chapters }}
-                          <h3>{{ index . 0 }}</h3>
-                          <h4>{{ index . 1 }}</h4>
-                    {{ end }}
-                  </div>
-                </div>
                 <div class="row center-xs title">
-                    <h4>{{ .Params.Part }}</h4>
-                    <h2>{{ .Title }}</h2>
+                    <h2>{{ .Params.Part }}</h2>
+                    <h4>{{ .Title }}</h4>
                 </div>
             </div>
         {{ end }}

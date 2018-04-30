@@ -30,19 +30,19 @@ disableKinds = ["taxonomy", "taxonomyTerm"] # This theme does not currently use 
     ajaxFormspree = false
 
 [[menu.main]]
-    name = "for whom"
+    name = "FOR WHOM"
     url  = "/#about"
     weight = 1
 [[menu.main]]
-    name = "structure"
+    name = "STRUCTURE"
     url  = "/#structure"
     weight = 2
 [[menu.main]]
-    name = "authors"
+    name = "AUTHORS"
     url  = "/#authors"
     weight = 3
 [[menu.main]]
-    name = "foxes"
+    name = "FOXES"
     url  = "/#foxes"
     weight = 4
 # [[menu.main]]

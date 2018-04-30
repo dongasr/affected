@@ -4,11 +4,10 @@
 {{ if .IsHome }}
 <script src="/scripts/siema.min.js" type="text/javascript"></script>
 <script>
-	var scroll = new SmoothScroll('a[href*="#"]');
-	const mySiema = new Siema({
-		duration: 200,
-		loop: true
+	var scroll = new SmoothScroll('a[href*="#"]', {
+		offset: 64,
 	});
+
 
 
 var prev = document.querySelector('.prev');
@@ -21,6 +20,13 @@ prev.addEventListener('click', function () {
 next.addEventListener('click', function () {
 	return mySiema.next();
 })
+
+var mySiema = new Siema({
+	duration: 500,
+	loop: true
+});
+
+setInterval(() => mySiema.next(), 15000)
 
 
 </script>

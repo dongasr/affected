@@ -2,26 +2,25 @@
 {{ $filename := "foxes.md" }}
 {{ if (where (readDir $directory) "Name" $filename) }}
   <section class="foxes" id="foxes">
+    <div class="row">
+
+    {{ $foxes := (where .Site.RegularPages "Section" "foxes") }}
+
+
+      <div class="col-xs-12 middle-xs slider-container">
+        <div class="siema">
+        {{ range $foxes }}
+          <div class="inner-container"> {{ .Content }} </div>
+        {{ end }}
+        </div>
+        <button class="prev"><img src="/images/icon-arrow-left.png"></button>
+        <button class="next"><img src="/images/icon-arrow-right.png"></button>
+      </div>
+
+    </div>
     <div class="wide-container middle-xs">
       <div class="row">
-
-      {{ $foxes := (where .Site.RegularPages "Section" "foxes") }}
-
-
-        <div class="col-xs-12 middle-xs slider-container">
-          <div class="siema">
-          {{ range $foxes }}
-            <div class="inner-container"> {{ .Content }} </div>
-          {{ end }}
-          </div>
-          <button class="prev"><img src="/images/icon-arrow-left.png"></button>
-          <button class="next"><img src="/images/icon-arrow-right.png"></button>
-        </div>
-
-      </div>
-      <div class="row">
         <div class="col-xs-12 center-xs">
-          <h2><a href="https://www.instagram.com/affected_thebook/">affected instagram</a></h2>
           <div id="instafeed">
           </div>
 
@@ -36,6 +35,7 @@
               template: '<a href="\{\{link\}\}" target="_blank" id="\{\{id\}\}"><img src="\{\{image\}\}" /></a>',
               sortBy: 'most-recent',
               links: false,
+              limit: 16
             });
             userFeed.run();
           </script>

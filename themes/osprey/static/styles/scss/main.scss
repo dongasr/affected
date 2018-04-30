@@ -37,7 +37,8 @@
 
 
 header {
-  background-color: $red;
+  position: relative;
+
   h1 {
     color: $white;
     font-size: 8rem;
@@ -50,14 +51,7 @@ header {
     position: relative;
     margin-left: 10px;
   }
-  strong::before{
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    height: 1px;
-    width: 100%;
-    border-bottom: 4px solid $white;
-  }
+
   p em {
     color: $white;
   }
@@ -76,8 +70,34 @@ header {
     }
 
   }
-  .signature-img {
-    display: inline-block;
+  .queryline {
+    width: 100%;
+    background-color: rgba(50,50,50,0.7);
+    //#65686b;
+    position: absolute;
+    bottom: 64px;
+    letter-spacing: 1px;
+    p {
+      margin: 1em 0 0;
+      padding: 1em;
+      padding-right: 3em;
+    }
+    .signature-img {
+      display: inline-block;
+      max-height: 3em;
+      margin-bottom: 1em;
+            padding-right: 3em;
+    }
+  }
+
+
+  #video-background {
+    position: absolute;
+    left: -25%;
+    top: -100%;
+    min-height: 100%;
+    min-width: 100%;
+
   }
 }
 nav {
@@ -89,6 +109,9 @@ nav {
   z-index: 100;
   text-align: center;
   box-shadow: 0 2px 2px rgba(0, 0, 0, .4 );
+  a {
+    color: $grey;
+  }
   h3 {
     margin: 0;
     font-family: $grey;
@@ -173,8 +196,8 @@ main.active {
   margin: auto;
 }
 .wide-container {
-  max-width: 65rem; // 1400px
-  padding: $vertical-rhythm * 2 0 $vertical-rhythm * 2;
+  max-width: 80rem; // 1400px
+  padding-top: $vertical-rhythm * 2;
   margin: auto;
 }
 p {
@@ -262,8 +285,6 @@ main h1 {
 }
 .about {
   width: 100%;
-  background-color: $smoke;
-  padding-bottom: $vertical-rhythm * 2;
   p {
     margin-top: $vertical-rhythm;
   }
@@ -276,6 +297,8 @@ main h1 {
   }
   img {
     max-width: 80%;
+    position: relative;
+    top: -4em;
   }
   .icon-link {
       width: $social-icon-size;
@@ -329,18 +352,11 @@ main h1 {
 }
 .gallery {
 
-  padding: 0 0 $vertical-rhythm * 2;
   margin: auto;
 
   div[class^="col-"], div[class*=" col-"] {
     padding: 0;
     position: relative;
-    &:hover .overlay {
-      opacity: 1;
-    }
-    &:hover .title h2 {
-      color: $white;
-    }
   }
 
   .gallery-container{
@@ -358,43 +374,27 @@ main h1 {
   h2 {
     color: $grey;
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
     left: 2rem;
     text-align: left;
     transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 400;
   }
   h4 {
     color: $grey;
     position: absolute;
-    bottom: 5rem;
+    bottom: 2rem;
     left: 2rem;
     text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
   }
 }
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  @include transparentize($black);
-  transition: .3s ease-in-out;
-  .chapters {
-    display: block;
-    padding: 3em 1em;
-  }
-  h3, h4 {
-    color: $white;
-    display: block;
-    width: 100%;
-    margin: 0;
-  }
-}
+
 #authors {
-  background-color: $red;
+  padding: $vertical-rhythm * 2 0;
   h1 {
     color: $white;
   }
@@ -402,6 +402,15 @@ main h1 {
     background-color: $white;
     padding: 2rem;
     padding-bottom: 0;
+
+    strong {
+      color: $red;
+    }
+
+
+  }
+  img {
+    border-radius: 50%;
   }
 }
 .blog {
@@ -414,13 +423,52 @@ main h1 {
 #foxes {
   .slider-container {
     position: relative;
-        background-color: $smoke;
+        background-color: #65686b;
+
         padding: 0;
 
     .siema {
       margin: 1em 0;
       .inner-container{
-        padding: 2em 3em 0;
+        padding: 2em 6em 0;
+        p, strong, em {
+                  color: #FFF;
+        }
+        p:nth-child(1){
+          position: relative;
+
+          &::before {
+            content: "''";
+            font-size: 2em;
+            line-height: 0.5em;
+            color: $red;
+            position: absolute;
+            top: 6px;
+            left: -20px;
+          }
+
+        &::after {
+          content: "''";
+          font-size: 2em;
+          line-height: 0.5em;
+          color: $red;
+          position: relative;
+          top: 6px;
+          right: -6px;
+
+        }
+      }
+        p:nth-last-child(1){
+          text-align: right;
+          margin-right: 2em;
+        &::before {
+          content: "- ";
+          font-size: 2em;
+          color: $red;
+          position: relative;
+
+        }
+      }
 
       }
     }
