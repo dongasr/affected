@@ -28,6 +28,7 @@
       max-width: 50% !important;
     }
   }
+
 }
 
 @keyframes "blink" {
@@ -37,12 +38,14 @@
 
 
 header {
-  position: relative;
+position: relative;
 
+.title {
+padding-top: 20vh;
   h1 {
     color: $white;
-    font-size: 8rem;
-    line-height: 6rem;
+    font-size: 6em;
+    line-height: 0.75em;
     letter-spacing: 0px;
     margin: 0;
   }
@@ -52,14 +55,12 @@ header {
     margin-left: 10px;
   }
 
-  p em {
-    color: $white;
-  }
+
   .button {
     display: inline-block;
     width: 200px;
     padding: 8px;
-    margin: 0 0.75em;
+    margin: 0.5em 0.75em;
     background-color: $grey;
     color: $white;
     border-radius: 25px;
@@ -70,10 +71,10 @@ header {
     }
 
   }
+}
   .queryline {
     width: 100%;
-    background-color: rgba(50,50,50,0.7);
-    //#65686b;
+    background-color: #65686b;
     position: absolute;
     bottom: 64px;
     letter-spacing: 1px;
@@ -81,6 +82,9 @@ header {
       margin: 1em 0 0;
       padding: 1em;
       padding-right: 3em;
+      em {
+        color: $white;
+      }
     }
     .signature-img {
       display: inline-block;
@@ -90,15 +94,89 @@ header {
     }
   }
 
+.video-container{
+  position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 10;
 
   #video-background {
-    position: absolute;
-    left: -25%;
-    top: -100%;
+
     min-height: 100%;
-    min-width: 100%;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 60em) {
+  .title {
+    padding-top: 20vh;
+  }
+    h1 {
+      font-size: 4em;
+      line-height: 2em;
+    }
+  .queryline {
+
+    bottom: 0;
+
+    p {
+      font-size: 1em;
+    }
+    .signature-img {
+
+      max-height: 2em;
+      margin-bottom: 0.5em;
+            padding-right: 0;
+    }
+  }
+
+
+}
+
+
+@media (max-width: 30em) {
+    .title {
+      top: -5vh;
+    h1 {
+      font-size: 4em;
+      line-height: 0.75em;
+    }
 
   }
+  .queryline {
+
+    bottom: 0;
+
+    p {
+      font-size: 1em;
+      padding: 1em;
+      margin: 0;
+    }
+    .signature-img {
+
+      max-height: 2em;
+      margin-bottom: 0.5em;
+            padding-right: 0;
+    }
+  }
+  .video-container {
+
+
+  #video-background {
+
+    height: 100%;
+    width: auto;
+
+
+  }
+    }
+}
 }
 nav {
   height: $vertical-rhythm * 2;
@@ -117,7 +195,9 @@ nav {
     font-family: $grey;
     letter-spacing: 2px;
     font-weight: 600;
+    font-size: 1em;
   }
+
   img {
     display: inline-block;
     max-width: 10em;
@@ -134,7 +214,10 @@ nav {
   }
   .nav-toggle{
     position: absolute;
-    right: 6em;
+    right: 2em;
+    img {
+      transform: scale(0.8);
+    }
   }
   .buy-button {
     position: absolute;
@@ -156,6 +239,14 @@ nav {
   .nav-toggle a {
     display: none;
   }
+}
+@media (max-width: 1024px) {
+  nav {
+    padding-left: 5em;
+  h3 {
+    font-size: 0.75em;
+  }
+}
 }
 .nav-fixed {
   position: fixed;
@@ -300,6 +391,12 @@ main h1 {
     position: relative;
     top: -4em;
   }
+  @media (max-width: 60em) {
+    img {
+      max-width: 60%;
+      top: 0;
+    }
+  }
   .icon-link {
       width: $social-icon-size;
       height: $social-icon-size;
@@ -360,12 +457,12 @@ main h1 {
   }
 
   .gallery-container{
-    margin: 0 2em;
+    margin: 0 1em;
   }
 }
 .title{
   position: absolute;
-  top: 0;
+  top: 1em;
   bottom: 0;
   left: 0;
   right: 0;
@@ -490,6 +587,19 @@ main h1 {
         right: 1em;
       }
 
+    }
+  }
+}
+
+@media(max-width:48em) {
+  #foxes {
+    .slider-container {
+      .siema {
+        margin: 1em 0;
+        .inner-container {
+          padding: 2em 2.5em 0;
+        }
+      }
     }
   }
 }

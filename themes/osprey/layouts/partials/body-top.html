@@ -6,8 +6,8 @@
 {{ end }}
 
 {{ if .IsHome }}
-  <header class="row middle-xs center-xs">
-    <div class="col-xs-12" style="padding-bottom: 15%;">
+  <header class="row top-xs center-xs">
+    <div class="col-xs-12 title">
           <h1>affected</h1>
           <strong>{{ .Site.Params.tagline }}</strong>
           <br><br>
@@ -15,20 +15,21 @@
           <a href="https://www.wiley.com/en-au/Affected%3A+Emotionally+Engaging+Customers+in+The+Digital+Age-p-9780730357018 " class="button">BUY THE BOOK</a>
           <a href="https://affected.eventbrite.com.au" class="button">RSVP LAUNCH</a>
     </div>
-    <video autoplay loop id="video-background" muted plays-inline>
-      <source src="/videos/affected.webm" type="video/webm">
-      <source src="/videos/affected.mp4" type="video/mp4">
-    </video>
-    <div class="queryline row middle-xs end-xs">
-      <div class="col-xs-10">
+    <div class="queryline row end-xs">
+      <div class="col-xs-12 col-sm-10">
         <p><em>{{ .Site.Params.queryline }}</em></p>
         <img class="signature-img" src="/images/sig.png"/>
       </div>
     </div>
+    <div class="row middle-xs center-xs video-container">
+      <video autoplay loop id="video-background" muted plays-inline>
+        <source src="/videos/affected.webm" type="video/webm">
+        <source src="/videos/affected.mp4" type="video/mp4">
+    </div>
   </header>
 {{ end }}
 
-<nav class="row middle-xs center-xs">
+<nav class="row middle-xs left-sm center-md">
   <div class="col-xs-4 col-sm-1 logo">
     <a href="{{ .Site.BaseURL }}#">
       <img src="{{ .Site.Params.logoSmall }}" alt="{{ .Site.Title }}">

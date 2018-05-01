@@ -3,16 +3,16 @@
 {{ if (where (readDir $directory) "Name" $filename) }}
   <section class="authors" id="authors">
     <div class="wide-container middle-xs">
-      <div class="row center-xs">
-        <div class="col-xs-2 middle-xs">
+      <div class="row middle-xs center-xs">
+        <div class="col-xs-6 col-sm-2 middle-xs">
           <img src="/images/cara.png">
         </div>
-        <div class="col-xs-8 middle-xs author-bio">
+        <div class="col-xs-12 col-sm-8 middle-xs author-bio">
           {{ with $.Site.GetPage "page" "authors.md" }}
             {{ .Content }}
           {{ end }}
         </div>
-        <div class="col-xs-2 middle-xs">
+        <div class="col-xs-6 col-sm-2 middle-xs">
           <img src="/images/karla.png">
         </div>
       </div>
