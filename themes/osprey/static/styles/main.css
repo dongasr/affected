@@ -1922,7 +1922,9 @@ main h1 {
   #foxes .slider-container .siema {
     margin: 1em 0; }
     #foxes .slider-container .siema .inner-container {
-      padding: 2em 6em 0; }
+      margin: 0 auto;
+      padding: 2em 6em 0;
+      max-width: 80rem; }
       #foxes .slider-container .siema .inner-container p, #foxes .slider-container .siema .inner-container strong, #foxes .slider-container .siema .inner-container em, #foxes .slider-container .siema .inner-container q {
         color: #FFF; }
       #foxes .slider-container .siema .inner-container p:nth-child(1) {
