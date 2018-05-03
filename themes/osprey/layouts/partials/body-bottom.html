@@ -26,7 +26,11 @@ var mySiema = new Siema({
 	loop: true
 });
 
-setInterval(() => mySiema.next(), 15000)
+
+setInterval(function() {
+	 mySiema.next();
+ }, 15000);
+//setInterval(() => mySiema.next(), 15000)
 
 
 </script>
