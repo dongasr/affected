@@ -42,6 +42,7 @@ position: relative;
 
 .title {
 padding-top: 20vh;
+z-index: 150;
   h1 {
     color: $white;
     font-size: 6em;
@@ -186,7 +187,7 @@ nav {
   background-color: #FFF;
   position: absolute;
   bottom: 0;
-  z-index: 100;
+  z-index: 200;
   text-align: center;
   box-shadow: 0 2px 2px rgba(0, 0, 0, .4 );
   a {
